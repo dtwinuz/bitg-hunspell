@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: cargo
+    directory: /converter
+    schedule:
+      interval: monthly
+    groups:
+      cargo:
+        patterns: ["*"]
