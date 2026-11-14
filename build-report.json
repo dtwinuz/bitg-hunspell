@@ -1,0 +1,25 @@
+{
+ "upstream": "8a1c3b2786da50568913c1481b50b643bfa96ec8",
+ "bitg": "dc50fb269b4ffbfbc29e3317a3591aab6a42ffd0",
+ "dic_in": 95108,
+ "dic_out": 95103,
+ "dropped": [
+  "Alkilsulfonatы",
+  "Bыstrumgel",
+  "Exinokandinы",
+  "Tыkveol",
+  "Xondroitinsulfatы"
+ ],
+ "okina_fix": [
+  "OʻFA -> ÖFA"
+ ],
+ "bitg_vs_letters": [
+  "asʼhob -> ashob",
+  "Ishoq -> Ishoq",
+  "ishoq -> ishoq",
+  "mushaf -> mushaf"
+ ],
+ "affix_strings": 15438,
+ "rep_entries": 65,
+ "conditions_expanded": {}
+}

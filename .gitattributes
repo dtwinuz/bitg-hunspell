@@ -1,0 +1,8 @@
+*.dic -text
+*.aff -text
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+*.xcu text eol=lf
+*.tsv text eol=lf

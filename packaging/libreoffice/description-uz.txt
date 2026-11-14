@@ -1,0 +1,1 @@
+Yangi 2026-yilgi özbek lotin alifbosi (Ö Ğ Ş Ç, tutuq ʼ) uçun Hunspell imlo luğati. 95 mingdan ortiq söz, ot, sifat va feʼl qöşimçalari bilan. Eski yozuvdagi sözlar (oʻ, gʻ, sh, ch) xato deb belgilanadi va yangi yozuvi taklif qilinadi. uz-hunspell (GPL-3.0) asosida, bitg (bitg.uz) bilan ögirilgan. Heç qanday maʼlumot yiğmaydi.

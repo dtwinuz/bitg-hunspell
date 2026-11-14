@@ -1,0 +1,1 @@
+Hunspell spell-check dictionary for Uzbek in the new 2026 Latin alphabet (Ö Ğ Ş Ç, tutuq ʼ). More than 95,000 words with suffix rules for nouns, adjectives and verbs. Old-alphabet spellings (oʻ, gʻ, sh, ch) are marked as errors and the new spelling is suggested. Derived from uz-hunspell (GPL-3.0) and converted with bitg (bitg.uz). Collects no data.

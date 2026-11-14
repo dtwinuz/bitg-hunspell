@@ -1,0 +1,197 @@
+# ok<TAB>word            : new-alphabet word, must be accepted
+# old<TAB>word<TAB>new   : old-alphabet spelling, must be rejected and 'new' suggested
+ok	özbek
+ok	Özbekiston
+ok	şahar
+ok	şaharlar
+ok	şaharda
+ok	şaharlarimizda
+ok	çoy
+ok	çiroyli
+ok	ğişt
+ok	töğri
+ok	söz
+ok	sözlar
+ok	sözlarimiz
+ok	kitob
+ok	kitoblarimiz
+ok	maktab
+ok	maktabda
+ok	öquvçi
+ok	öquvçilar
+ok	öqituvçi
+ok	öqituvçilarimiz
+ok	bola
+ok	bolalar
+ok	ona
+ok	ota
+ok	uy
+ok	uyda
+ok	iş
+ok	işçi
+ok	işlamoq
+ok	işladi
+ok	kelmoq
+ok	keldi
+ok	kelyapti
+ok	bormoq
+ok	bordi
+ok	yozmoq
+ok	yozdi
+ok	öqimoq
+ok	öqidi
+ok	maʼno
+ok	maʼlumot
+ok	taʼlim
+ok	sanʼat
+ok	jamiyat
+ok	davlat
+ok	xalq
+ok	til
+ok	tilimiz
+ok	qöşiq
+ok	qöşiqlar
+ok	ğalaba
+ok	ğoya
+ok	yaxşi
+ok	yomon
+ok	katta
+ok	kiçik
+ok	çiqmoq
+ok	çiqdi
+ok	şamol
+ok	qiş
+ok	bahor
+ok	yoz
+ok	kuz
+ok	kun
+ok	ertalab
+ok	keça
+ok	bugun
+ok	ertaga
+ok	mehmon
+ok	mehnat
+ok	dehqon
+ok	paxta
+ok	ğalla
+ok	qişloq
+ok	kömir
+ok	öyin
+ok	öyinçoq
+ok	döst
+ok	döstlar
+ok	döstlik
+ok	Toşkent
+ok	Samarqand
+ok	Buxoro
+ok	Farğona
+ok	Xorazm
+ok	Ishoq
+ok	maşhur
+ok	savol
+ok	javob
+ok	çalişmoq
+ok	telefon
+ok	gazeta
+ok	çegara
+ok	şart
+ok	şaxs
+ok	şaxsiy
+ok	işonç
+ok	işonçli
+ok	çöl
+ok	köça
+ok	köçalar
+ok	köz
+ok	közlar
+ok	qöl
+ok	qöllar
+ok	öğil
+ok	kişi
+ok	boş
+ok	toş
+ok	quş
+ok	ğarb
+ok	şimol
+ok	şarq
+ok	oçiq
+ok	uçun
+ok	heç
+ok	şu
+ok	şunday
+ok	özimiz
+ok	boğ
+ok	toğ
+ok	oğir
+ok	soğlom
+ok	öqiş
+ok	yoşlar
+ok	ma'no
+ok	ma’no
+ok	taʼlimot
+old	oʻzbek	özbek
+old	Oʻzbekiston	Özbekiston
+old	shahar	şahar
+old	choy	çoy
+old	gʻisht	ğişt
+old	toʻgʻri	töğri
+old	soʻz	söz
+old	oʻquvchi	öquvçi
+old	ish	iş
+old	qoʻshiq	qöşiq
+old	yaxshi	yaxşi
+old	kichik	kiçik
+old	chiqdi	çiqdi
+old	shamol	şamol
+old	qishloq	qişloq
+old	doʻst	döst
+old	Toshkent	Toşkent
+old	Fargʻona	Farğona
+old	koʻcha	köça
+old	koʻz	köz
+old	qoʻl	qöl
+old	oʻgʻil	öğil
+old	ishonch	işonç
+old	chegara	çegara
+old	shaxs	şaxs
+old	kecha	keça
+old	oʻyin	öyin
+old	gʻalaba	ğalaba
+old	gʻoya	ğoya
+old	mashhur	maşhur
+old	choʻl	çöl
+old	oʻqituvchi	öqituvçi
+old	ishchi	işçi
+old	ishladi	işladi
+old	oʻqidi	öqidi
+old	chiroyli	çiroyli
+old	kishi	kişi
+old	bosh	boş
+old	tosh	toş
+old	qush	quş
+old	gʻarb	ğarb
+old	shimol	şimol
+old	sharq	şarq
+old	ochiq	oçiq
+old	uchun	uçun
+old	hech	heç
+old	shu	şu
+old	shunday	şunday
+old	oʻzimiz	özimiz
+old	bogʻ	boğ
+old	togʻ	toğ
+old	ogʻir	oğir
+old	sogʻlom	soğlom
+old	oʻqish	öqiş
+old	yoshlar	yoşlar
+old	ishlar	işlar
+old	shaharlarimizda	şaharlarimizda
+old	kitobcha	kitobça
+old	bolacha	bolaça
+old	oʻn	ön
+old	o'zbek	özbek
+old	g'isht	ğişt
+old	to'g'ri	töğri
+old	qo'l	qöl
+old	o‘zbek	özbek
+old	o’zbek	özbek

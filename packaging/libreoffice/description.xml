@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description xmlns="http://openoffice.org/extensions/description/2006"
+             xmlns:d="http://openoffice.org/extensions/description/2006"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+  <identifier value="uz.bitg.hunspell.uz2026"/>
+  <version value="@VERSION@"/>
+  <dependencies>
+    <d:OpenOffice.org-minimal-version value="3.0" d:name="OpenOffice.org 3.0"/>
+  </dependencies>
+  <publisher>
+    <name xlink:href="https://bitg.uz" lang="en">bitg</name>
+  </publisher>
+  <display-name>
+    <name lang="en">Uzbek spelling dictionary (2026 Latin alphabet)</name>
+    <name lang="uz">Özbek imlo luğati (2026 alifbo)</name>
+  </display-name>
+  <extension-description>
+    <src xlink:href="description-en.txt" lang="en"/>
+    <src xlink:href="description-uz.txt" lang="uz"/>
+  </extension-description>
+</description>

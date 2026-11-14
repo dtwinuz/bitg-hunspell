@@ -1,0 +1,14 @@
+[package]
+name = "bitg-hunspell-convert"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+publish = false
+description = "Line-by-line old Uzbek Latin -> 2026 alphabet converter for dictionary data (wraps bitg-core)"
+
+[dependencies]
+# Pinned bitg commit. Offline/local build: see build.py --bitg-src.
+bitg-core = { git = "https://github.com/dtwinuz/bitg", rev = "dc50fb269b4ffbfbc29e3317a3591aab6a42ffd0" }
+
+[profile.release]
+opt-level = 3
