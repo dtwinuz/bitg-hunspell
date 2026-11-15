@@ -25,7 +25,7 @@ BITG_URL = "https://github.com/dtwinuz/bitg"
 BASENAME = "uz_UZ-2026"
 FIREFOX_LANG = "uz-Latn-UZ"
 FIREFOX_ID = "uz-2026@bitg.uz"
-LIBREOFFICE_LOCALE = "uz-UZ"
+LIBREOFFICE_LOCALE = "uz-Latn-UZ"  # LibreOffice maps Uzbek Latin (LanguageType 0x0443) to this tag; "uz-UZ" is never consulted
 VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
 ZIP_DATE = (2026, 1, 1, 0, 0, 0)  # fixed timestamp -> byte-identical archives
 

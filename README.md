@@ -11,7 +11,7 @@ bilan avtomatik ögirilgan va Firefox hamda LibreOffice uçun qadoqlangan.
 | Sözlar (asos) | 95 103 (+ ot, sifat, feʼl qöşimçalari) |
 | Fayllar | `uz_UZ-2026.dic`, `uz_UZ-2026.aff` |
 | Firefox | `dist/bitg-hunspell-<versiya>-firefox.xpi` (til kodi `uz-Latn-UZ`) |
-| LibreOffice | `dist/bitg-hunspell-<versiya>-libreoffice.oxt` (til `uz-UZ`) |
+| LibreOffice | `dist/bitg-hunspell-<versiya>-libreoffice.oxt` (til `uz-Latn-UZ`, LibreOffice'da *Uzbek Latin*) |
 | Litsenziya | GPL-3.0 (uz-hunspell kabi) |
 
 ### Nima qiladi
@@ -30,7 +30,7 @@ bir xil işladi. 3 000 gapli korpusda qamrov 93,15%: eski luğatniki 92,81%. Bat
 - **Firefox:** `.xpi` faylni `about:addons` → ⚙ → *Install Add-on From File* orqali öçiring.
   Keyin matn maydonida öng tugma → *Languages* → *Uzbek (Latin, Uzbekistan)*.
 - **LibreOffice:** *Tools → Extension Manager → Add* → `.oxt`. Matn tilini *Uzbek* (Latin) qiling.
-  Eski alifbodagi özbek luğati ham örnatilgan bölsa, uni öçiring: ikkalasi bir xil `uz-UZ` tilida.
+  Eski alifbodagi özbek luğati ham örnatilgan bölsa, uni öçiring: ikkalasi bir xil *Uzbek Latin* tilida.
 - **Hunspell (Linux/macOS):** `.dic` va `.aff` ni `~/.hunspell` yoki `/usr/share/hunspell` ga
   nusxalang: `hunspell -d uz_UZ-2026`.
 
@@ -39,6 +39,7 @@ bir xil işladi. 3 000 gapli korpusda qamrov 93,15%: eski luğatniki 92,81%. Bat
 python -I build.py                 # uz-hunspell ni belgilangan commit'da yuklab, hammasini quradi
 python -I build.py --bitg-src ../bitg   # bitg ning lokal nusxasi bilan
 python -I tools/verify.py --upstream .cache/uz-hunspell   # tekshiruvlar
+"<LibreOffice>/program/python.exe" tools/lo_test.py --soffice "<LibreOffice>/program/soffice.exe" --oxt dist/bitg-hunspell-<versiya>-libreoffice.oxt   # haqiqiy LibreOffice'da
 ```
 Kerak: Python 3.10+, git, Rust (cargo). Natija bayt-ma-bayt bir xil (zip vaqtlari belgilangan).
 
@@ -68,8 +69,10 @@ Firefox dictionary add-on and a LibreOffice extension. Nothing here is published
 5. Writes `dist/*.xpi` and `dist/*.oxt` as reproducible zips.
 
 ### Decisions
-- **Locale tags.** There is no BCP 47 tag for "2026 orthography". LibreOffice only knows `uz-UZ`
-  (Uzbek Latin), so the `.oxt` uses it and replaces any old-alphabet Uzbek dictionary in use.
+- **Locale tags.** There is no BCP 47 tag for "2026 orthography". LibreOffice maps Uzbek Latin
+  (LanguageType 0x0443) to `uz-Latn-UZ`, so the `.oxt` registers that tag. A dictionary registered as
+  `uz-UZ` loads but Writer never consults it (the bug in 0.1.0; `tools/lo_test.py` guards against it).
+  The `.oxt` replaces any old-alphabet Uzbek dictionary in use.
   Firefox accepts any tag; the add-on uses `uz-Latn-UZ` so it does not collide with the existing
   old-alphabet "Uzbek Spell Checker" add-on (which owns `uz`/`uz-UZ`), and still matches pages marked
   `lang="uz"`. File names are `uz_UZ-2026.*`; `LANG uz_UZ` stays inside the `.aff`.
