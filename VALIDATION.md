@@ -1,4 +1,4 @@
-# Validation — bitg-hunspell 0.1.0
+# Validation — bitg-hunspell 0.1.1
 
 Inputs: uz-hunspell `8a1c3b2786da50568913c1481b50b643bfa96ec8` and bitg `dc50fb269b4ffbfbc29e3317a3591aab6a42ffd0`.
 Engine: Hunspell 1.7.2 (MSYS2 `mingw-w64-ucrt-x86_64-hunspell`). spylls 0.1.7 was used as a second engine.
@@ -16,7 +16,7 @@ Engine: Hunspell 1.7.2 (MSYS2 `mingw-w64-ucrt-x86_64-hunspell`). spylls 0.1.7 wa
 | `REP` entries | 65 (35 upstream entries, converted, plus old-alphabet → new) |
 
 Reproduce: `python -I build.py`. The packages are byte-identical across runs:
-the `.xpi` SHA-256 starts with `3a246bdb` and the `.oxt` with `b8448c4e` for the build checked here.
+the `.xpi` SHA-256 starts with `4c8a373f` and the `.oxt` with `e54f7637` for the build checked here.
 The hashes change when the build script changes.
 
 ## 2. Morphology equivalence (`tools/verify.py`)
@@ -73,5 +73,29 @@ are mostly tutuq mistakes in the old text (`aʻzo` for `aʼzo`) that bitg correc
 
 - `addons-linter` (latest, 2026-11-15) on the `.xpi`: 0 errors, 0 warnings, 0 notices.
 - The `.oxt` XML files (`description.xml`, `META-INF/manifest.xml`, `dictionaries.xcu`) are well-formed.
-  The extension has **not** been installed in a real LibreOffice yet, because LibreOffice is not on the
-  build machine.
+
+## 6. LibreOffice (`tools/lo_test.py`)
+
+The `.oxt` is installed with `unopkg` into a throw-away profile and every case in `tests/words.tsv` is
+sent to LibreOffice's spell-check dispatcher by LanguageType 0x0443 (Uzbek Latin), the value Writer
+passes for text in that language. Run on Windows with LibreOffice 26.8.2 (scoop `extras/libreoffice`):
+
+```
+"<LibreOffice>/program/python.exe" tools/lo_test.py --soffice "<LibreOffice>/program/soffice.exe" --oxt dist/bitg-hunspell-0.1.1-libreoffice.oxt
+dispatcher Uzbek locales: ['qlt|UZ|uz-Latn-UZ']
+[Writer path, LanguageType 0x0443] new-alphabet accepted: 129/129
+[Writer path, LanguageType 0x0443] old spellings rejected: 66/66; correct word first: 66/66
+OK
+```
+
+The same test against the 0.1.0 package, which registered the dictionary as `uz-UZ`:
+
+```
+[Writer path, LanguageType 0x0443] new-alphabet accepted: 129/129
+[Writer path, LanguageType 0x0443] old spellings rejected: 0/66; correct word first: 0/66
+66 failure(s)
+```
+
+LibreOffice canonicalises Uzbek Latin to `uz-Latn-UZ`. A dictionary declared as `uz-UZ` loads, and
+answers direct `Locale("uz","UZ")` queries, but Writer never routes text to it, so every word looks
+correct. CI runs this test on Ubuntu for every change.

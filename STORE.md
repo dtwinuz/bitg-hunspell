@@ -14,7 +14,7 @@ Text for addons.mozilla.org (AMO) and extensions.libreoffice.org. Copy it into t
 | Source code | the git repository of this project (link it once it is public) |
 | Firefox add-on ID | `uz-2026@bitg.uz` |
 | Firefox dictionary language | `uz-Latn-UZ` |
-| LibreOffice identifier / locale | `uz.bitg.hunspell.uz2026` / `uz-UZ` |
+| LibreOffice identifier / locale | `uz.bitg.hunspell.uz2026` / `uz-Latn-UZ` (Uzbek Latin) |
 | Category (AMO) | Dictionaries & Language Packs → Dictionary |
 | Category (LibreOffice) | Dictionary |
 | Files | `dist/bitg-hunspell-0.1.0-firefox.xpi`, `dist/bitg-hunspell-0.1.0-libreoffice.oxt` |
