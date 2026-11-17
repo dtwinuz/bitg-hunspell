@@ -1,10 +1,24 @@
 # bitg-hunspell — Özbek imlo luğati, 2026 alifbo
 
-**Özbekça** · [English](#english)
-
 Yangi 2026-yilgi özbek lotin alifbosi (**Ö Ğ Ş Ç**, tutuq **ʼ**) uçun birinçi Hunspell imlo luğati.
 U [uz-hunspell](https://github.com/uzbek-net/uz-hunspell) loyihasidan (eski alifbo) [bitg](https://bitg.uz)
 bilan avtomatik ögirilgan va Firefox hamda LibreOffice uçun qadoqlangan.
+
+[![release](https://img.shields.io/github/v/release/dtwinuz/bitg-hunspell?label=release)](https://github.com/dtwinuz/bitg-hunspell/releases/latest)
+[![ci](https://github.com/dtwinuz/bitg-hunspell/actions/workflows/ci.yml/badge.svg)](https://github.com/dtwinuz/bitg-hunspell/actions/workflows/ci.yml)
+[![license](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE)
+
+**[bitg.uz](https://bitg.uz) · [Jonli demo (bitg)](https://wonmor.io/demo/bitg/) · [Releases](https://github.com/dtwinuz/bitg-hunspell/releases/latest) · [VALIDATION.md](VALIDATION.md) · [English](#english)**
+
+```text
+$ echo "özbek şahar oʻzbek shahar çoy" | hunspell -i utf-8 -d uz_UZ-2026 -a
+@(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.2)
+*
+*
+& oʻzbek 1 12: özbek
+& shahar 2 19: şahar, sahar
+*
+```
 
 | | |
 |---|---|
@@ -54,7 +68,8 @@ Luğatning asosiy mehnati — **uz-hunspell** mualliflariniki: Alisher Jalolov (
 The first Hunspell spell-check dictionary for the **new 2026 Uzbek Latin alphabet** (Ö Ğ Ş Ç instead of
 oʻ gʻ sh ch; the tutuq ʼ stays). It is generated from [uz-hunspell](https://github.com/uzbek-net/uz-hunspell)
 (old alphabet, GPL-3.0) with the [bitg](https://github.com/dtwinuz/bitg) converter and packaged as a
-Firefox dictionary add-on and a LibreOffice extension. Nothing here is published yet.
+Firefox dictionary add-on and a LibreOffice extension; ready-made `.xpi` and `.oxt` files are on the
+[Releases](https://github.com/dtwinuz/bitg-hunspell/releases/latest) page.
 
 ### How it is built
 `build.py` (standard library only):
